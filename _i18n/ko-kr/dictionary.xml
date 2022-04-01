@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">NetApp 기술 지원으로 지원 케이스를 생성하기 전에 NetApp Support 사이트 계정을 Cloud Manager에 추가한 다음 지원을 위해 등록해야 합니다.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">지원을 위해 등록하십시오</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link-macro"></block>
+  <block id="d53e2559d6ace0e907fc57192bf286b6" category="paragraph"><block ref="d53e2559d6ace0e907fc57192bf286b6" category="inline-link-macro-rx"></block></block>
+  <block id="09a149a5c5d747e4952df900eab14719" category="summary">Cloud Manager에서 더 이상 관리하지 않으려는 경우 사내 ONTAP 작업 환경을 제거합니다.</block>
+  <block id="833397a222b2d3624761a8e68a721fd5" category="doc">온프레미스 ONTAP 작업 환경을 제거합니다</block>
+  <block id="f23bd56e3b5d6f7f6472fcb2b4cd3d5a" category="paragraph">작업 환경을 제거해도 ONTAP 클러스터에는 영향을 주지 않습니다. Cloud Manager에서 언제든지 다시 검색할 수 있습니다.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
+  <block id="0280e7f2fa84bc4f3c493a7a89c90d28" category="list-text">Canvas 페이지에서 온-프레미스 ONTAP 작업 환경의 이름을 두 번 클릭합니다.</block>
+  <block id="80e3b13d71092100ec711ddee84d23a4" category="list-text">메뉴 아이콘을 클릭하고 * 제거 * 를 선택합니다.</block>
+  <block id="82efd2783df66726ca1b3a680a181ac8" category="inline-image-macro">페이지의 오른쪽 위에 있는 메뉴와 제거 옵션을 보여 주는 스크린샷.</block>
+  <block id="fdc54b68e260b5861ecabd7cfd437124" category="paragraph"><block ref="fdc54b68e260b5861ecabd7cfd437124" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40b851aafab82c78484c46169f816fd2" category="list-text">확인하려면 * 제거 * 를 클릭합니다.</block>
+  <block id="21bba0a7398f9083f3d50b42a5504b37" category="summary">Cloud Manager를 사용하면 사내 환경, NetApp 프라이빗 스토리지 구성 및 IBM 클라우드에서 ONTAP 클러스터를 검색할 수 있습니다. 온프레미스 클러스터를 Cloud Manager Canvas에 추가하면 Cloud Volumes ONTAP 및 기타 클라우드 스토리지 솔루션과 동일한 도구를 사용하여 이러한 클러스터를 관리할 수 있습니다.</block>
+  <block id="99cef0e0b5f9d9d8e28e23f9098ec0b6" category="doc">사내 ONTAP 클러스터 검색</block>
+  <block id="a22cdf185b246eb453267216a656867b" category="paragraph">이러한 시스템에서 스토리지를 프로비저닝할 수 있을 뿐만 아니라 Cloud Manager에 이러한 시스템을 추가하면 Digital Wallet에서 하드웨어 및 소프트웨어 계약 상태 정보를 쉽게 볼 수 있고, 해당 클러스터에 중요한 클라우드 기반 서비스를 구성할 수 있습니다. 여기에는 클라우드로 데이터 복제, 클라우드에 데이터 백업, 콜드 데이터를 클라우드에 계층화, 해당 데이터에 대한 규정 준수 검사 실행 등이 포함됩니다.</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">요구 사항</block>
+  <block id="1f4a04b80ac0fff1532fab464942b834" category="list-text">클라우드 공급자 또는 구내에 설치된 커넥터.</block>
+  <block id="cb754929bd2884eb53bfc39ddd5aadad" category="paragraph">콜드 데이터를 클라우드에 계층화하려면 콜드 데이터를 계층화할 위치에 따라 Connector의 요구사항을 검토해야 합니다.</block>
+  <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">커넥터에 대해 자세히 알아보십시오</block>
+  <block id="da1264a616f156bd6836a85f7dfdea5a" category="list-text"><block ref="da1264a616f156bd6836a85f7dfdea5a" category="inline-link-rx"></block></block>
+  <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">커넥터 간 전환</block>
+  <block id="74d39f4b6fe0e32c5cfa2ed86891bf44" category="list-text"><block ref="74d39f4b6fe0e32c5cfa2ed86891bf44" category="inline-link-rx"></block></block>
+  <block id="36afa058c74d288178950c27927bdb38" category="inline-link">Cloud Tiering에 대해 알아보십시오</block>
+  <block id="4a88b41a42a9618291028593ae2a0b05" category="list-text"><block ref="4a88b41a42a9618291028593ae2a0b05" category="inline-link-rx"></block></block>
+  <block id="b4ffcf033604873104ed7bd60333e4fc" category="list-text">클러스터를 Cloud Manager에 추가하는 admin 사용자 계정의 클러스터 관리 IP 주소 및 암호</block>
+  <block id="231fa707099b15748dcedaa672a38da0" category="paragraph">Cloud Manager는 HTTPS를 사용하여 ONTAP 클러스터를 검색합니다. 사용자 지정 방화벽 정책을 사용하는 경우 다음 요구 사항을 충족해야 합니다.</block>
+  <block id="b06972aadece5eaa3ac9cc962a035477" category="list-text">커넥터 호스트는 포트 443을 통한 아웃바운드 HTTPS 액세스를 허용해야 합니다.</block>
+  <block id="2b9e44ec073f65b2847ecb4d29f27fb3" category="paragraph">Connector가 클라우드에 있는 경우 모든 아웃바운드 통신은 미리 정의된 보안 그룹에서 허용됩니다.</block>
+  <block id="6f94f90ef34d6e0c2ce0a93e0edc57d7" category="list-text">ONTAP 클러스터는 포트 443을 통한 인바운드 HTTPS 액세스를 허용해야 합니다.</block>
+  <block id="6f9f6c9a212736eda9e7ebc73ff5b991" category="paragraph">기본 "관리" 방화벽 정책은 모든 IP 주소에서 인바운드 HTTPS 액세스를 허용합니다. 이 기본 정책을 수정하거나 자체 방화벽 정책을 만든 경우 HTTPS 프로토콜을 해당 정책에 연결하고 Connector 호스트에서 액세스를 활성화해야 합니다.</block>
+  <block id="f154773445f5f4ed354ad1d6b1458de0" category="inline-link">NSS 계정을 Cloud Manager에 추가합니다</block>
+  <block id="b91358861e1d424b929dddf5a397bc81" category="list-text">유효한 NetApp Support 사이트 자격 증명 세트입니다. 자세한 내용은 를 참조하십시오<block ref="6ee42390f038b7658fb8dfbbc6c21b14" category="inline-link-rx"></block>.</block>
+  <block id="a629e0a77229bc88612039da60ff1fcb" category="section-title">검색된 클러스터와 검색되지 않은 온프레미스 클러스터 보기</block>
+  <block id="be46af8b5037a09e14d6aea77aa745d1" category="paragraph">Cloud Manager의 _Digital Wallet_ 또는 _Discovery_ 서비스를 사용하여 지원 계약 중인 온프레미스 ONTAP 클러스터를 확인, 검색 및 관리할 수 있습니다.</block>
+  <block id="d12f32a1e487926f44cc406fb25ca418" category="paragraph">Digital Wallet_에서 온프레미스 클러스터 및 라이센스 세부 정보를 보려면 다음을 수행하십시오.</block>
+  <block id="e2f4af182c255caedb431ba0b5e53878" category="list-text">Cloud Manager에서 * Digital Wallet * 서비스를 선택합니다.</block>
+  <block id="fdc520fd72025accf572613a40564176" category="list-text">On-Premises ONTAP * 탭을 클릭합니다.</block>
+  <block id="705316ae4d75d35f1e961cab58a5d5df" category="inline-image-macro">온-프레미스 ONTAP 클러스터에 대한 디지털 지갑 페이지의 스크린샷.</block>
+  <block id="7d584a90892954972995f98a62f03440" category="paragraph"><block ref="7d584a90892954972995f98a62f03440" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16e9dbd4a18087ff905686ae9bd7ca44" category="paragraph">ONTAP 클러스터는 Cloud Manager에서 검색되었는지 여부와 함께 표시됩니다.</block>
+  <block id="93416f52fcce3ab7a37ed87d0aeb8134" category="paragraph">NetApp Support Site(NSS) 계정 자격 증명을 입력하라는 메시지가 표시되면 지원 대시보드 에 해당 자격 증명을 입력합니다. 계정을 추가하면 해당 계정에 포함된 클러스터가 표시됩니다.</block>
+  <block id="354f939b57a1918425820055547d8166" category="paragraph">_Discovery 서비스_ 에서 온프레미스 클러스터 및 라이센스 세부 정보를 보려면 다음을 수행하십시오.</block>
+  <block id="d69b7414da10a87e5a3030f220161dfa" category="list-text">Cloud Manager에서 * Discovery * 서비스를 선택합니다.</block>
+  <block id="f1b045e4cf088de8d47b50c99c582e48" category="list-text">필요한 경우 NSS 계정과 연결된 Active IQ 로그인을 선택합니다.</block>
+  <block id="0f0ffa8a90cbc52fa86676ccb69096ce" category="inline-image-macro">온-프레미스 ONTAP 클러스터에 대한 기본 검색 페이지의 스크린샷.</block>
+  <block id="04c986062f9c3ab6ca9967dac4c5be0d" category="paragraph"><block ref="04c986062f9c3ab6ca9967dac4c5be0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b0ae438dbb700ffcab0b452edad46174" category="paragraph">유효한 지원 계약이 있는 ONTAP 클러스터는 Cloud Manager에서 검색되었는지 여부와 함께 표시됩니다.</block>
+  <block id="b5e4244593ae3713ba9c349b71c06182" category="inline-link-macro">Active IQ 디지털 자문으로부터 지원 계약을 갱신하십시오</block>
+  <block id="f58334fc97f74b0f9a5bd0fcab804d79" category="admonition">지원 계약이 만료되면 검색 페이지에서 시스템이 제거됩니다. 그러나 작업 환경에서 이러한 시스템을 계속 관리할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="73ab273e50affbed0eaeebe6bee46665" category="inline-link-macro-rx"></block>.</block>
+  <block id="7f50c223930d4a02cade2b9c75256f8f" category="section-title">클러스터 정보 및 계약 세부 정보 보기</block>
+  <block id="e6dfd5017eebf97461338fa01b9cb076" category="paragraph">Digital Wallet_을 사용하여 클러스터 세부 정보와 하드웨어 및 소프트웨어 계약 상태를 볼 수 있습니다.</block>
+  <block id="7d8cc3d1d840829a8cdda42ed1f06341" category="list-text">디지털 지갑 * 에서 * 온-프레미스 ONTAP * 탭을 클릭합니다.</block>
+  <block id="84c2c11254da9ee11c4482a60291186d" category="paragraph">소프트웨어 계약 및 하드웨어 계약 만료 날짜가 각 클러스터의 줄에 표시됩니다.</block>
+  <block id="3f844e426a10085ba24d2a77f32144b3" category="list-text">계약이 만료일에 가깝거나 만료된 경우 Cloud Manager 오른쪽 하단에 있는 채팅 아이콘을 클릭하여 계약 연장을 요청할 수 있습니다.</block>
+  <block id="ddd53e8927c624ebcbf44e804dd39950" category="inline-image-macro">아래쪽 캐럿</block>
+  <block id="d69c8f5affd800d0b387db4764fa4a30" category="list-text">추가 세부 정보를 알고 싶은 클러스터의 경우 을 클릭합니다 <block ref="3cc4b517e471a9470762ff8efb27bddb" category="inline-image-macro-rx" type="image"></block> 클러스터 정보를 확장합니다.</block>
+  <block id="18f84cf96ce5861e5585468ef883b180" category="inline-image-macro">클러스터 라이센스 정보를 볼 수 있도록 클러스터 세부 정보를 확장하는 스크린샷</block>
+  <block id="5796086a716a7059f711cc33be934605" category="paragraph"><block ref="5796086a716a7059f711cc33be934605" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="521890c2a62a1a85cbecc2bafda74ce4" category="section-title">Cloud Manager에서 온프레미스 클러스터 검색</block>
+  <block id="37a6c50787e86807fb86ba567bcdf0ee" category="paragraph">Cloud Manager에서 _Digital Wallet_, _Discovery_서비스 또는 _Canvas_에서 온프레미스 ONTAP 클러스터를 검색할 수 있습니다. 검색되면 Cloud Manager에서 작업 환경으로 사용할 수 있으므로 클러스터를 관리할 수 있습니다.</block>
+  <block id="c9ecc8a69079ef340936f1093bfada6d" category="section-title">Digital Wallet에서 클러스터 검색</block>
+  <block id="908ef7c718a69fa183e13e4c8b3ab47d" category="paragraph">디지털 지갑에서 ONTAP 클러스터를 검색하여 작업 환경으로 추가할 수 있습니다.</block>
+  <block id="36d55ec313e00378aaaf5ec3b1bcff58" category="list-text">디지털 지갑 * 에서 * 온-프레미스 ONTAP * 탭을 클릭합니다.</block>
+  <block id="8d2ff04d10c442ed57703018babe9f96" category="inline-image-macro">NSS 계정에 있는 모든 클러스터를 보여 주는 온-프레미스 ONTAP 페이지의 스크린샷</block>
+  <block id="5f5cb0a23f869bcd760424b63ca7ccbe" category="paragraph"><block ref="5f5cb0a23f869bcd760424b63ca7ccbe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b9a7f6da25384dd51d6dbd5ba88f195" category="list-text">Cloud Manager를 통해 관리할 클러스터에 대해 * 검색 * 을 클릭합니다.</block>
+  <block id="f024b01de8a49fd78376b5b34e191e05" category="list-text">Discover ONTAP Cluster_페이지에서 admin 사용자 계정의 암호를 입력하고 * Discover * 를 클릭합니다.</block>
+  <block id="8de100c0dba6b3831c0b2881ceb2cda0" category="inline-image-macro">ONTAP 클러스터 세부 정보 페이지의 예, 클러스터 관리 IP 주소, 사용자 이름 및 암호를 보여주는 스크린샷</block>
+  <block id="357d0c6bce7e8c970eebbf9c77a986a3" category="paragraph"><block ref="357d0c6bce7e8c970eebbf9c77a986a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3c3c9057924029bd556e6edcfa649159" category="paragraph">클러스터 관리 IP 주소는 Digital Wallet의 정보를 기반으로 채워집니다.</block>
+  <block id="fc45e850f400ce201ca92baeb830649a" category="paragraph">클러스터 상태가 _온-프레미스 ONTAP_페이지에서 * 검색됨 * 으로 바뀝니다.</block>
+  <block id="851ba55b7a9669c2b53281675a9400d7" category="paragraph">Cloud Manager는 클러스터를 검색하고 클러스터 이름을 작업 환경 이름으로 사용하여 Canvas의 작업 환경에 추가합니다.</block>
+  <block id="487e5c142c79949705e4fec4bdaf1798" category="inline-image-macro">Canvas의 온프레미스 ONTAP 클러스터 스크린샷</block>
+  <block id="55b907f18f62b7afccbe773678898915" category="paragraph"><block ref="55b907f18f62b7afccbe773678898915" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5001076d3540a9fadfaa9abbcd7c0a33" category="paragraph">오른쪽 패널에서 이 클러스터에 대한 서비스를 활성화하여 클러스터에서 데이터를 복제하고, 클라우드에 데이터 계층화를 설정하고, 볼륨을 클라우드에 백업하며, 볼륨에 대한 규정 준수 검사를 실행할 수 있습니다. 새 볼륨을 생성하거나 System Manager를 실행하여 고급 작업을 수행할 수도 있습니다.</block>
+  <block id="7362a812b6851f7a017007fc87c33502" category="section-title">검색 페이지에서 클러스터 검색</block>
+  <block id="e69ab6e4fe1f42bbc031b0b99f02cc32" category="paragraph">검색 페이지에서 ONTAP 클러스터를 검색하여 작업 환경으로 추가할 수 있습니다.</block>
+  <block id="b6ba0959daf6c2e88778283aca0e636c" category="list-text">Discovery * 페이지에서 * Cluster Inventory * 탭을 클릭합니다.</block>
+  <block id="53c88078c2a5d382925e8aedc1edc203" category="inline-image-macro">NSS 계정에 있는 모든 클러스터를 보여 주는 검색 페이지 스크린샷</block>
+  <block id="c3b5cdb9acfd996c5114037523a62d4e" category="paragraph"><block ref="c3b5cdb9acfd996c5114037523a62d4e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="13b9e6e3af52ca38ce11c3fd268b0306" category="list-text">Choose a Location_page * On-Premises ONTAP * 가 미리 선택되어 있으므로 * Continue * 를 클릭합니다.</block>
+  <block id="663909252cbf804332d40198bd07c3e1" category="list-text">ONTAP 클러스터 세부 정보 _ 페이지에서 admin 사용자 계정의 암호를 입력하고 * 추가 * 를 클릭합니다.</block>
+  <block id="a84799eaf08f86932722efc82243f9c5" category="paragraph"><block ref="a84799eaf08f86932722efc82243f9c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b23f4f3576f9bd475fb30812d2b23d55" category="paragraph">클러스터 관리 IP 주소는 Active IQ의 정보를 기반으로 채워집니다.</block>
+  <block id="dd7d25d7e52a6b920a44c09b9d6001c2" category="list-text">Details &amp; Credentials_ 페이지에서 클러스터 이름이 작업 환경 이름으로 추가되므로 * Go * 를 클릭합니다.</block>
+  <block id="1093fa2422906ba065f8a75ad66f4a5e" category="section-title">Canvas 페이지에서 클러스터를 검색하는 중입니다</block>
+  <block id="2db26f8570c8b8acf20a1bfbc80fd8d7" category="paragraph">ONTAP 클러스터를 검색하고 Canvas 페이지에서 이를 작업 환경으로 추가할 수 있습니다. 이 단계는 클러스터가 현재 지원 계약이 없기 때문에 Digital Wallet 또는 Discovery 페이지에 나열되지 않은 경우에 사용할 수 있습니다.</block>
+  <block id="97707ad60b3e5459995b6db6d5086ef2" category="list-text">Canvas 페이지에서 * 작업 환경 추가 * 를 클릭하고 * 온-프레미스 ONTAP * 를 선택합니다.</block>
+  <block id="2f799a76b51c894f217a81de4e75abc1" category="list-text">메시지가 표시되면 연결선을 만듭니다.</block>
+  <block id="937fa9b8cdf644357e79a543061b3118" category="paragraph">자세한 내용은 위의 링크를 참조하십시오.</block>
+  <block id="669e31e2ded4144ba1ab8e5d140217fa" category="list-text">ONTAP 클러스터 세부 정보 _ 페이지에서 클러스터 관리 IP 주소, admin 사용자 계정의 암호를 입력하고 * 추가 * 를 클릭합니다.</block>
+  <block id="67fe55a3364c0f403605fc5a0962dd79" category="list-text">Details &amp; Credentials_페이지에서 작업 환경의 이름과 설명을 입력한 다음 * Go * 를 클릭합니다.</block>
+  <block id="9b1f59bbde82cfc6467a99c2530b6993" category="paragraph">Cloud Manager는 클러스터를 검색하고 Canvas의 작업 환경에 추가합니다.</block>
+  <block id="1e54529331fefb19128d41707045a526" category="summary">온프레미스 ONTAP 클러스터의 새로운 기능에 대해 알아보십시오.</block>
+  <block id="25203f9c21dc384a4870095f19f67811" category="doc">온프레미스 ONTAP 클러스터의 새로운 기능</block>
+  <block id="f1c93420db258097a199364a47f6389a" category="section-title">2022년 2월 27일</block>
+  <block id="f25694bb9bc00e8fcfcc1a3c65dd482b" category="section-title">디지털 지갑에서 "온-프레미스 ONTAP" 탭을 사용할 수 있습니다.</block>
+  <block id="d3f07c4c7baf0c60bc64c1cdc48732af" category="paragraph">이제 하드웨어 및 서비스 계약 만료일과 함께 온프레미스 ONTAP 클러스터의 인벤토리를 볼 수 있습니다. 클러스터에 대한 추가 정보도 제공됩니다.</block>
+  <block id="184ca21b83c54a7ba12f9b1077ccb494" category="inline-link-macro">이 중요한 온프레미스 클러스터 정보를 확인하는 방법을 알아보십시오</block>
+  <block id="2e75bdb3e0110a2699bbf1604ed481b5" category="paragraph"><block ref="c8b8a178761036798ad62f0cd5ecaa34" category="inline-link-macro-rx"></block>. 클러스터에 대한 NetApp NSS(Support Site Account)가 있어야 하며 NSS 자격 증명을 Cloud Manager 계정에 연결해야 합니다.</block>
+  <block id="323b3f6bd6f8fad6e54ac5e1413cf3dc" category="section-title">2022년 1월 11일</block>
+  <block id="d69df284f21ccdf93082c4aaf0953b6d" category="section-title">온프레미스 ONTAP 클러스터의 볼륨에 추가하는 태그는 태그 지정 서비스와 함께 사용할 수 있습니다.</block>
+  <block id="3686b84bef4027bfe5a11fcf472d8662" category="paragraph">볼륨에 추가하는 태그는 이제 애플리케이션 템플릿 서비스의 태그 지정 기능과 연결되어 리소스 관리를 구성하고 단순화할 수 있습니다.</block>
+  <block id="e7c5ad171298e38494ee7665c2b581e3" category="section-title">2021년 11월 28일</block>
+  <block id="feea05ef76a2f6f2d444dfab436c31c4" category="section-title">온프레미스 ONTAP 클러스터를 위한 볼륨 생성 마법사가 간소화되었습니다</block>
+  <block id="decff6be18712c90db61aad628609885" category="paragraph">볼륨 생성 마법사를 재설계했으므로 이제 사용자 지정 엑스포트 정책을 선택할 수 있습니다.</block>
+  <block id="1758589feb07955b2d0a7b0b09d739c8" category="section-title">2021년 3월 8일</block>
+  <block id="4741d0181532f824e500e5fb61f113de" category="section-title">Active IQ 서비스에서 사내 ONTAP 클러스터 정보를 사용할 수 있습니다</block>
+  <block id="4daa302553b3da312bae6dd7eb61185b" category="inline-link-macro">클러스터를 검색합니다</block>
+  <block id="a0f0c23d7902a428b74d69d482ddd35f" category="list-text">Active IQ에서 온프레미스 클러스터 목록(NSS 계정 기반)을 표시하면 버튼을 클릭하여 에 연결할 수 있습니다 <block ref="6092f07e6002a33280f60ad47718209e" category="inline-link-macro-rx"></block> Cloud Manager Canvas에 추가합니다. 따라서 Cloud Manager에서 모든 스토리지 시스템을 쉽게 관리할 수 있습니다.</block>
+  <block id="9daa178990889b96486cdf1ec49a312b" category="inline-link-macro">Ansible 플레이북을 다운로드하고 클러스터 펌웨어를 업그레이드합니다</block>
+  <block id="17a4a2fa852d95e14e95882197efc7aa" category="list-text">Active IQ에서 하나 이상의 클러스터에 펌웨어 업데이트가 필요하다고 결정하면 버튼을 클릭하여 에 추가할 수 있습니다 <block ref="16afe937cb21a9e778b58814919b3a40" category="inline-link-macro-rx"></block>.</block>
+  <block id="6ab419e28cab05bd181b5548828ce291" category="inline-link-macro">Cloud-Ready 워크로드 탭</block>
+  <block id="1ebb52f6b09efabdd77b2a2848b85455" category="list-text">새로운 소식 <block ref="6662d2379ae546ce8e2cb9fe679f2897" category="inline-link-macro-rx"></block> NetApp이 온프레미스 ONTAP 클러스터에서 클라우드로 이동하는 데 적합한 워크로드 또는 볼륨 목록을 제공합니다. 이러한 볼륨 중 일부를 이동하면 비용을 절감하고 성능과 복원력을 향상시킬 수 있습니다.</block>
+  <block id="9e49141228614f46674f3e99aa052d48" category="inline-link-macro">리프트 앤 시프트(Lift and Shift)란 무엇입니까?</block>
+  <block id="40e7938989b9c693ef9d2535a73efc96" category="paragraph">을 참조하십시오 <block ref="e6e341fabb88ca4be499965211728d47" category="inline-link-macro-rx"></block></block>
+  <block id="a79252770e38858e803b78ebe70f476c" category="summary">Cloud Manager의 검색 페이지에서는 온프레미스 환경에서 검색되지 않은 ONTAP 클러스터를 표시하고, 클러스터에 업데이트된 디스크 또는 쉘프 펌웨어가 필요한지 여부, 온프레미스 시스템을 구입할 때 부여된 모든 Cloud Volumes ONTAP 라이센스를 사용하고 있는지 여부를 확인할 수 있습니다. 이 정보는 Active IQ 디지털 자문업체에서 클라우드 관리자에게 제공합니다.</block>
+  <block id="201d4e253581704f3c9075d20de0800d" category="doc">Active IQ 데이터를 사용하여 ONTAP 클러스터 관리</block>
+  <block id="dab2edf9eaac3950e92c281ce358af01" category="inline-link-macro">Active IQ 디지털 자문업체</block>
+  <block id="514b6ec137f734ec761c475906287d33" category="paragraph">Cloud Manager의 검색 페이지에서는 온프레미스 환경에서 검색되지 않은 ONTAP 클러스터를 표시하고, 클러스터에 업데이트된 디스크 또는 쉘프 펌웨어가 필요한지 여부, 온프레미스 시스템을 구입할 때 부여된 모든 Cloud Volumes ONTAP 라이센스를 사용하고 있는지 여부를 확인할 수 있습니다. 이 정보는 에서 Cloud Manager에 제공됩니다 <block ref="96b0c35d37b4e23868c2e41d5824676c" category="inline-link-macro-rx"></block>.</block>
+  <block id="877e966493986f18eebcf46b7d6d67c2" category="section-title">사용하지 않는 Cloud Volumes ONTAP 노드 기반 라이센스 보기</block>
+  <block id="e051d909dcdfaf8dde6aa313e7e514fb" category="paragraph">구입한 대부분의 사내 ONTAP 스토리지 시스템 패키지에는 무료 Cloud Volumes ONTAP 노드 기반 라이센스가 포함되어 있으므로 Cloud Manager에서 NetApp 클라우드 스토리지 오퍼링을 사용해 볼 수 있습니다. 라이센스를 사용하여 새 Cloud Volumes ONTAP 인스턴스를 생성하거나 기존 Cloud Volumes ONTAP 인스턴스에 라이센스를 적용하여 용량을 368TiB까지 확장할 수 있습니다.</block>
+  <block id="28b5c704efe77fa99914c5d15b834356" category="paragraph">NetApp Support 사이트 자격 증명을 기반으로 사용하지 않는 Cloud Volumes ONTAP 라이센스가 있는지 여부를 확인할 수 있습니다.</block>
+  <block id="a43ee6f922a7c62ff05b101954d934b2" category="admonition">노드 기반 라이센스의 기간은 라이센스가 발급된 후 다음 달의 첫날에 시작됩니다. 예를 들어, 2021년 12월 15일에 노드 기반 BYOL 라이센스를 취득한 경우, 라이센스 기간은 2022년 1월 1일(다음 달의 첫 번째 날)부터 시작됩니다.</block>
+  <block id="bb6db3272f61df9d142245bad134431b" category="list-text">Cloud Manager에서 * Discovery * 탭을 클릭합니다.</block>
+  <block id="cfc865340f0f02a4dd08f62e2e8fe125" category="list-text">페이지 하단의 * Licenses * 탭을 클릭합니다.</block>
+  <block id="639b1d7fb8e43ed30e50b381c3c4aa34" category="inline-image-macro">중고 및 미사용 Cloud Volumes ONTAP 라이센스 스크린샷</block>
+  <block id="a2c8a9de7c0c7fa33897f8350d1b5c22" category="paragraph"><block ref="a2c8a9de7c0c7fa33897f8350d1b5c22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e0100df5af797921fc79adf1b8eaad21" category="paragraph">사용되지 않는 각 라이센스에 대해 * 사용권 사용 * 버튼이 나타납니다.</block>
+  <block id="e8f6ae75b342427a9d51c95e9abc390e" category="list-text">사용권을 활성화하고 사용하려면 * 사용권 사용 * 을 클릭합니다.</block>
+  <block id="5287c83ddc3dc50aaff735cfe18a95da" category="inline-image-macro">두 라이센스 사용 옵션의 스크린샷.</block>
+  <block id="3d94be1c5586728c800c45af3978b6d1" category="paragraph"><block ref="3d94be1c5586728c800c45af3978b6d1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d838eea6d6aef3f385a5f70f924f4064" category="paragraph">사용 가능한 라이센스 사용 옵션에 대한 자세한 내용은 아래 작업을 참조하십시오.</block>
+  <block id="9010a59dbd1bb55c1d09325b086cf95a" category="section-title">사용하지 않는 Cloud Volumes ONTAP 라이센스 사용</block>
+  <block id="9df8192c2e5c4ad9ecb7165618fee709" category="paragraph">사용하지 않는 라이센스를 사용하여 새 Cloud Volumes ONTAP 인스턴스를 만들거나 기존 Cloud Volumes ONTAP 인스턴스에서 라이센스 용량을 확장할 수 있습니다. 라이센스 용량은 368TiB입니다.</block>
+  <block id="bc866d16cf14596fb689a7be19bd9b62" category="paragraph">expires_column은 라이센스가 활성화된 마지막 날짜를 나타냅니다. 새 Cloud Volumes ONTAP 시스템을 생성할 때 라이센스가 만료되는 날짜입니다. 기존 Cloud Volumes ONTAP 시스템을 업데이트할 때 기존 라이센스가 연장되는 기간을 나타냅니다.</block>
+  <block id="c01362d3449463ab4de39a406ef94e81" category="paragraph">라이센스 유형 _, _ 하이퍼스케일러 _ 및 _ 모델 유형 _ 열은 Cloud Volumes ONTAP 라이센스의 유형을 설명합니다. 예를 들어, * BYOL | Single | Azure * 는 "Microsoft Azure"에 구축된 "단일 노드" Cloud Volumes ONTAP 시스템에 대한 "BYOL | Single | Azure * 라이센스를 "BYOL" 방식으로 사용한다는 것을 의미합니다. 이 열에 표시될 수 있는 값은 표에 나와 있습니다.</block>
+  <block id="1976d7f704de389d9fe064e08ea35b2d" category="cell">열</block>
+  <block id="c82a6100dace2b41087ba6cf99a5976a" category="cell">값</block>
+  <block id="cdff8be4ca736db9b0823a504eda7e80" category="cell">라이센스 유형</block>
+  <block id="ca75617283c17509ed536915221a8bcd" category="cell">PAYGO BYOL</block>
+  <block id="c1b47471a575ac0bf20392ca17ecd880" category="cell">하이퍼스케일러</block>
+  <block id="57361d3b4b4360545b0c23a47073a41f" category="cell">Azure AWS GCP 모든 공급자</block>
+  <block id="e2716f400d704606cc5d4c0987e7ad76" category="cell">모델 유형</block>
+  <block id="1ac2cd329c86309526504526d4255f5d" category="cell">단일 HA</block>
+  <block id="4955f544d812d37952a286831508aad2" category="paragraph">new_Cloud Volumes ONTAP 시스템을 생성할 때 이는 구축하는 시스템의 유형입니다. 예를 들어, 샘플 라이센스(* BYOL | Single | Azure *)를 사용하면 Azure에서 최대 368TiB의 사용 권한을 가진 단일 노드 Cloud Volumes ONTAP 시스템을 생성할 수 있습니다. 이 라이센스를 사용하여 HA 시스템을 생성하거나 AWS에 인스턴스를 구축할 수 없습니다.</block>
+  <block id="0dd047bef2bdbbe37da283a248bb038f" category="paragraph">existing_Cloud Volumes ONTAP 시스템을 업데이트할 때 기존 라이센스의 용량을 확장할 수 있는 시스템 유형을 나타냅니다. 샘플 라이센스를 다시 사용하면 Azure에서 단일 노드 Cloud Volumes ONTAP 시스템에 대한 라이센스를 확장할 수 있습니다. 이 라이센스를 사용하여 HA 시스템 또는 AWS에 구축된 인스턴스에 대한 라이센스를 확장할 수 없습니다.</block>
+  <block id="8317d8b26726204f53143b343d30cd86" category="section-title">사용하지 않는 라이센스로 새 Cloud Volumes ONTAP 시스템을 생성합니다</block>
+  <block id="316ed297194a01f1ecb2157f422311a3" category="paragraph">다음 단계에 따라 사용하지 않는 라이센스로 새 Cloud Volumes ONTAP 인스턴스를 만듭니다.</block>
+  <block id="4137ed06a6eedeb10215c62f13cf6a4f" category="list-text">사용권 사용 * 을 클릭하고 새 Cloud Volumes ONTAP*에 대한 사용권 사용 * 을 선택합니다.</block>
+  <block id="f0e305a2a1a498a40953222c6422fa17" category="list-text">"사용권 사용..." 페이지에서 사용권 정보를 확인하고 * 사용권 사용 * 을 클릭합니다.</block>
+  <block id="cb64511523e262038bbadb5f570d0f00" category="paragraph">클라우드 공급자와 노드 수가 모두 라이센스에 의해 정의되기 때문에 대부분의 경우 Cloud Volumes ONTAP 시스템의 작업 환경을 만들기 위한 * 세부 정보 및 자격 증명 * 페이지로 이동합니다.</block>
+  <block id="bdfda9514b4405352b99463199c4abce" category="paragraph">"모든 제공업체"로 정의된 라이센스를 사용하는 경우 * 세부 정보 및 자격 증명 * 페이지를 완료하기 전에 먼저 클라우드 공급자를 선택할 수 있도록 * 위치 선택 * 페이지로 이동합니다.</block>
+  <block id="eb188ed1b50312a411c4193636276963" category="list-text">다음 단계에 따라 작업 환경과 첫 번째 볼륨을 생성합니다.</block>
+  <block id="a91c3ba620bed9543e87449350fcf5f8" category="paragraph">Cloud Volumes ONTAP 시스템을 구축하는 클라우드 공급자에 따라 다음 섹션을 참조하십시오.</block>
+  <block id="7ca1af679f0ba86814f2ad58a578cb7c" category="inline-link">Azure에서 Cloud Volumes ONTAP 실행</block>
+  <block id="0be0836bc69799b792b188dfc8c7fe7e" category="list-text"><block ref="0be0836bc69799b792b188dfc8c7fe7e" category="inline-link-rx"></block></block>
+  <block id="6602afb860a6cca23c3b75bf601365eb" category="inline-link">AWS에서 Cloud Volumes ONTAP 실행</block>
+  <block id="3e33b81f05bb640dee79c5aa4e351c91" category="list-text"><block ref="3e33b81f05bb640dee79c5aa4e351c91" category="inline-link-rx"></block></block>
+  <block id="fdbc311c4dd4bb425160f22f166435fa" category="inline-link">GCP에서 Cloud Volumes ONTAP를 시작합니다</block>
+  <block id="cd47b7c8c0d2761b197e744505044dd0" category="list-text"><block ref="cd47b7c8c0d2761b197e744505044dd0" category="inline-link-rx"></block></block>
+  <block id="fc1b08dc940b99d55538c59350836c4e" category="section-title">기존 Cloud Volumes ONTAP 시스템의 라이센스 용량 확장</block>
+  <block id="018b9186b94c6dbbc76c0f561953e8fe" category="paragraph">무료 라이센스 중 하나의 라이센스 요구 사항과 일치하는 현재 구축된 Cloud Volumes ONTAP 시스템(동일한 클라우드 공급자, 노드 수 등)이 있는 경우 다음 단계에 따라 라이센스 용량을 368TiB까지 확장할 수 있습니다.</block>
+  <block id="b363019bfe1ca02220f0c0febfd0d7d3" category="list-text">사용권 사용 * 을 클릭하고 * 기존 Cloud Volumes ONTAP에 사용권 추가 * 를 선택합니다.</block>
+  <block id="8d2b2ad68e66c2954477a0042c18491b" category="inline-image-macro">기존 Cloud Volumes ONTAP 시스템에 라이센스를 추가하기 위한 라이선스 추가 대화 상자의 스크린샷</block>
+  <block id="a16e3557d85b779de3481b9d463231a3" category="paragraph"><block ref="a16e3557d85b779de3481b9d463231a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f63e565e78fbc3941f4aeb818d9adc7" category="list-text">"라이센스 추가..." 페이지에서 라이센스를 확장할 Cloud Volumes ONTAP 시스템을 선택하고 * 라이센스 추가 * 를 클릭합니다.</block>
+  <block id="01101cf6491f283bbc511b2204660e07" category="paragraph">확인 대화 상자가 표시됩니다.</block>
+  <block id="943eaf8e2fe7a686c34b7ea7d07b7e5f" category="inline-image-macro">라이센스가 Cloud Volumes ONTAP 시스템에 추가되었음을 보여 주는 스크린샷</block>
+  <block id="0920bd8a3d301421a85410319fdd1857" category="paragraph"><block ref="0920bd8a3d301421a85410319fdd1857" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d5190a36a662e84cf8de5c09d44f6dfa" category="list-text">창을 닫고 검색 페이지로 돌아가려면 * 닫기 * 를 클릭하고, 해당 시스템의 라이센스에 대한 자세한 내용을 보려면 Cloud Volumes ONTAP 라이센스 페이지로 이동하려면 링크를 클릭하십시오.</block>
+  <block id="c7cde2cc5531750bd7afb257a7416f69" category="section-title">새 디스크 및 쉘프 펌웨어 다운로드 중</block>
+  <block id="c1f8c4f481fea12447e6335187bccea1" category="paragraph">검색된 ONTAP 클러스터에 쉘프 또는 디스크 펌웨어가 업데이트되어야 하는지 여부를 확인할 수 있습니다. Ansible 플레이북을 다운로드하여 펌웨어를 업그레이드할 수 있습니다.</block>
+  <block id="ece4bd8c93cef708b8850f01d015cbc1" category="paragraph">* 참고: * 새 펌웨어를 보고 다운로드할 수 있는 기능은 특정 지원 계획에 가입한 경우에만 사용할 수 있습니다.</block>
+  <block id="5dc9524b4cd7d7218b8b70e20d81aee9" category="list-text">검색 페이지에서 * 펌웨어 업데이트 * 탭을 클릭합니다.</block>
+  <block id="e821b7bf1b046d731db61151ffef074f" category="inline-image-macro">업데이트된 펌웨어가 필요한 노드를 보여 주는 검색 페이지의 스크린샷</block>
+  <block id="88bdb0042cbe86520f536789a86aeb48" category="paragraph"><block ref="88bdb0042cbe86520f536789a86aeb48" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbdce8b07b7c380c846236fee37c7836" category="paragraph">클러스터에 새 펌웨어가 필요한 경우 * 모두 다운로드 * 버튼이 나타납니다.</block>
+  <block id="8d6d3d96c09b58400db6a0a90b4f4b2e" category="list-text">모두 다운로드 * 를 클릭하고 zip 파일을 저장합니다.</block>
+  <block id="2b089b0727b24846b4d2b3849b27af3f" category="inline-link-macro">스토리지 시스템 펌웨어를 업데이트합니다</block>
+  <block id="cc7bf767406c46d6dec3789baeeeef16" category="list-text">zip 파일의 압축을 풀고 에 대한 다음 지침을 참조하십시오 <block ref="21157034c7cb15af080552bd727bf9bb" category="inline-link-macro-rx"></block>.</block>
+  <block id="5296842aa0336682a51237a868549568" category="paragraph">펌웨어가 업데이트됩니다. 다음에 ONTAP 시스템에서 Active IQ로 AutoSupport 메시지를 보내면 _펌웨어 업데이트_ 페이지의 상태가 업데이트되어 업데이트가 더 이상 필요하지 않음을 표시합니다.</block>
+  <block id="ff1c95e8f3fad8c7515a303da09fad1e" category="section-title">클라우드의 대상이 되는 온프레미스 워크로드 보기</block>
+  <block id="517bf15cf54a7936b9d15152071a6b5f" category="paragraph">특정 워크로드 또는 볼륨은 온프레미스 ONTAP 클러스터에서 Cloud Volumes ONTAP 시스템으로 이동하는 데 적합합니다. 이러한 이점에는 비용 절감과 성능 및 복원력 개선이 포함됩니다. Cloud Ready 워크로드_tab은 검색된 ONTAP 클러스터에서 이러한 워크로드의 목록을 제공합니다.</block>
+  <block id="4daab9a749a609edfa8ab73aa0d34893" category="inline-image-macro">클라우드로 이동할 수 있는 온프레미스 클러스터의 워크로드를 보여주는 스크린샷</block>
+  <block id="c36e9cf75b6ce98dc93b30298ed56dc4" category="paragraph"><block ref="c36e9cf75b6ce98dc93b30298ed56dc4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a142176543aec4571af8742cf8d54b8" category="paragraph">이 페이지에서 제공되는 지원되는 워크로드는 SAP, SAP HANA, Oracle, 파일 공유 및 SharePoint입니다.</block>
+  <block id="0c4ef3dd5858986fd8e07047ff6608cf" category="inline-link-macro">리프트 앤 시프트</block>
+  <block id="97df77063884378a1c2d764fdec7597a" category="paragraph">_Lift &amp; Shift_는 앱을 클라우드로 마이그레이션하는 접근 방식입니다. 다시 앱을 설계하지 않고 애플리케이션과 관련 데이터를 클라우드 플랫폼으로 이동하는 것을 의미합니다. 에 대한 자세한 내용을 참조하십시오 <block ref="5ace72c4dc027f4fe1a0278eeb38322e" category="inline-link-macro-rx"></block>.</block>
+  <block id="1586c6707e7935aaf588bf6b29222f4d" category="summary">Cloud Manager에서 온프레미스 ONTAP 클러스터를 검색할 경우 작업 환경을 열어 스토리지를 프로비저닝하고 관리할 수 있습니다.</block>
+  <block id="b310817751b4e8272bdb5072c505baef" category="doc">온프레미스 ONTAP 클러스터를 위한 스토리지 관리</block>
+  <block id="38eaccec7e82003efc63778895a9ac9d" category="section-title">볼륨 생성 중</block>
+  <block id="2cb8480b538d668110f1483b21b959f3" category="paragraph">Cloud Manager를 사용하면 기존 애그리게이트에 NFS 또는 CIFS 볼륨을 생성할 수 있습니다. Cloud Manager를 사용하여 온프레미스 ONTAP 클러스터에 새 애그리게이트를 생성할 수 없습니다.</block>
+  <block id="efc4120a3fbfbea33245fb931c324492" category="inline-xref">수행할 수 있습니다</block>
+  <block id="ba9dee2f877a286e797bf6a3232b07bb" category="paragraph">"템플릿"이라는 Cloud Manager 기능을 사용하면 데이터베이스 또는 스트리밍 서비스와 같은 특정 애플리케이션의 워크로드 요구사항에 최적화된 볼륨을 생성할 수 있습니다. 조직에서 사용해야 하는 볼륨 템플릿을 만든 경우 를 따릅니다 <block ref="e476f8430392eaa6984ef9c1426bdf73" category="inline-xref-macro-rx"></block>.</block>
+  <block id="7c1c859794874e74db7044dd733c5ca7" category="list-text">Canvas 페이지에서 볼륨을 프로비저닝할 온프레미스 ONTAP 클러스터의 이름을 두 번 클릭합니다.</block>
+  <block id="e0e02b01eefffa92ef6dd41ca0bfddaa" category="list-text">새 볼륨 추가 * 를 클릭합니다.</block>
+  <block id="108a74a6cbb575c986177039e07dc411" category="list-text">마법사의 단계에 따라 볼륨을 생성합니다.</block>
+  <block id="3c4fc22bba56c8a041aad60e63c7450f" category="list-text">* 세부 정보 및 보호 *: 볼륨에 대한 기본 세부 정보를 입력한 다음 스냅샷 정책을 선택합니다.</block>
+  <block id="3b0e375a08fe94a129cba31916c9d2dc" category="paragraph">이 페이지의 일부 필드는 설명이 필요 없습니다. 다음 목록에서는 지침이 필요한 필드를 설명합니다.</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">필드에 입력합니다</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">설명</block>
+  <block id="6f6cb72d544962fa333e2e34ce64f719" category="cell">크기</block>
+  <block id="7b975bd58356ec64d88f70d7f167a299" category="cell">입력할 수 있는 최대 크기는 씬 프로비저닝의 사용 여부에 따라 크게 달라집니다. 이를 통해 현재 사용 가능한 물리적 스토리지보다 더 큰 볼륨을 생성할 수 있습니다.</block>
+  <block id="426fb47479d0477ed5dbc9388b9add76" category="cell">스냅샷 정책</block>
+  <block id="052c4d27b63fed6776d46336a295d801" category="cell">스냅샷 복사본 정책은 자동으로 생성되는 NetApp 스냅샷 복사본의 수와 빈도를 지정합니다. NetApp 스냅샷 복사본은 성능 영향이 없고 최소한의 스토리지가 필요한 시점 파일 시스템 이미지입니다. 기본 정책을 선택하거나 선택하지 않을 수 있습니다. Microsoft SQL Server의 tempdb와 같이 임시 데이터에 대해 없음을 선택할 수 있습니다.</block>
+  <block id="5090bb88c9aa49ab33053342a61490ca" category="list-text">* 프로토콜 *: 볼륨의 프로토콜(NFS 또는 CIFS)을 선택한 다음 볼륨에 대한 액세스 제어 또는 권한을 설정합니다.</block>
+  <block id="32532e671368d9ba8ec11ef9121e8520" category="paragraph">CIFS를 선택하고 서버가 아직 설정되지 않은 경우 Cloud Manager에서 Active Directory 또는 작업 그룹을 사용하여 CIFS 서버를 설정하라는 메시지를 표시합니다.</block>
+  <block id="10ca883ec839df9958683234c16faa0c" category="paragraph">다음 목록에서는 지침이 필요한 필드를 설명합니다.</block>
+  <block id="8aaaedc342a0dce1d73d33f3fb69a2af" category="cell">액세스 제어</block>
+  <block id="bc1f478a23842406dc7a171758b075ab" category="cell">NFS 엑스포트 정책은 볼륨에 액세스할 수 있는 서브넷의 클라이언트를 정의합니다. 기본적으로 Cloud Manager는 서브넷의 모든 인스턴스에 대한 액세스를 제공하는 값을 입력합니다.</block>
+  <block id="4f365bcd27fae641194545a5a823e30f" category="cell">권한 및 사용자/그룹</block>
+  <block id="5cd4beaa083f2301775c1a1bc84f2afc" category="cell">이러한 필드를 사용하면 사용자 및 그룹(액세스 제어 목록 또는 ACL라고도 함)에 대한 SMB 공유에 대한 액세스 수준을 제어할 수 있습니다. 로컬 또는 도메인 Windows 사용자 또는 그룹, UNIX 사용자 또는 그룹을 지정할 수 있습니다. 도메인 Windows 사용자 이름을 지정하는 경우 domain\username 형식을 사용하여 사용자의 도메인을 포함해야 합니다.</block>
+  <block id="63c4ac4a1d6cda8f9ce366cee0962eb7" category="list-text">* Usage Profile *: 볼륨에서 스토리지 효율성 기능을 활성화 또는 비활성화할지 여부를 선택합니다.</block>
+  <block id="1fd2dba2020c106a2c49da0e6ad7e868" category="paragraph">ONTAP에는 필요한 총 스토리지 양을 줄일 수 있는 몇 가지 스토리지 효율성 기능이 포함되어 있습니다. NetApp 스토리지 효율성 기능은 다음과 같은 이점을 제공합니다.</block>
+  <block id="6cd880eabbec3488232c6cba3fbcf998" category="list-text">씬 프로비저닝</block>
+  <block id="e0a869114b17393f8a2fea22f17329ae" category="list-text">에서는 실제 스토리지 풀에 있는 것보다 더 많은 논리적 스토리지를 호스트 또는 사용자에게 제공합니다. 스토리지 공간을 사전에 할당하는 대신 데이터가 기록될 때 스토리지 공간을 각 볼륨에 동적으로 할당합니다.</block>
+  <block id="83f45cad5e6f535ff10e564a526baad0" category="list-text">중복 제거</block>
+  <block id="9baaeec0cd7e25ec2d4277d7befe94c7" category="list-text">동일한 데이터 블록을 찾아 단일 공유 블록에 대한 참조로 대체하여 효율성을 향상시킵니다. 이 기술은 동일한 볼륨에 상주하는 중복된 데이터 블록을 제거하여 스토리지 용량 요구 사항을 줄여줍니다.</block>
+  <block id="82af841589057aa8922b1ac3bb4a28a4" category="list-text">압축</block>
+  <block id="f5061de48feb872d5a805e7385702973" category="list-text">1차, 2차 및 아카이브 스토리지의 볼륨 내에서 데이터를 압축하여 데이터를 저장하는 데 필요한 물리적 용량을 줄입니다.</block>
+  <block id="eb5c6869b3fc04254530622723507f79" category="list-text">* Review * (검토 *): 볼륨에 대한 세부 정보를 검토한 다음 * Add * (추가 *)를 클릭합니다.</block>
+  <block id="721171135447663f810b8610ea482f5a" category="section-title">템플릿에서 볼륨 생성</block>
+  <block id="afe466f073b1387a5eab0283552b7517" category="paragraph">조직에서 특정 애플리케이션의 워크로드 요구사항에 최적화된 볼륨을 구축할 수 있도록 사내 ONTAP 볼륨 템플릿을 만든 경우 이 섹션의 단계를 따릅니다.</block>
+  <block id="7ae492186bd46e832a6b64cff9b1575a" category="paragraph">템플릿에 디스크 유형, 크기, 프로토콜, 스냅샷 정책 등과 같은 특정 볼륨 매개변수가 이미 정의되어 있기 때문에 템플릿을 사용하면 작업을 보다 쉽게 수행할 수 있습니다. 매개 변수가 이미 미리 정의된 경우 다음 볼륨 매개 변수로 건너뛸 수 있습니다.</block>
+  <block id="395f4870d887a81edabc6ad40f5a84f0" category="admonition">템플릿을 사용하는 경우에만 NFS 또는 CIFS 볼륨을 생성할 수 있습니다.</block>
+  <block id="ec8d6cd563b6f9acbaf5d348267aeb5c" category="list-text">Canvas 페이지에서 볼륨을 프로비저닝할 온-프레미스 ONTAP 시스템의 이름을 클릭합니다.</block>
+  <block id="5bc96ba8ddc4433dd0df94e6350c496e" category="list-text">을 클릭합니다 <block ref="a5c9b85c9e509567688aed8106bc419c" category="inline-image-macro-rx" type="image"></block> &gt; * 템플릿에서 볼륨 추가 *.</block>
+  <block id="74099e7b70c30e3a55db543cda9bfc1e" category="inline-image-macro">템플릿에서 새 볼륨을 추가하는 방법을 보여 주는 스크린샷</block>
+  <block id="f5cfbd56be4d95a78f70efb70e2e9079" category="paragraph"><block ref="f5cfbd56be4d95a78f70efb70e2e9079" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b33742921c3a09b3c0916cff2d87632" category="list-text">Select Template_page에서 볼륨을 생성하는 데 사용할 템플릿을 선택하고 * Next * 를 클릭합니다.</block>
+  <block id="41fdbb8293e553892079d0e7ad8a9ad9" category="inline-image-macro">사용 가능한 응용 프로그램 템플릿의 스크린샷.</block>
+  <block id="cfb983acad90faeddd99d211d0d05e99" category="paragraph"><block ref="cfb983acad90faeddd99d211d0d05e99" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8675916eaff2fb10955e8a3b1b14108f" category="paragraph">Define Parameters_page가 표시됩니다.</block>
+  <block id="19f5b7f92268b2f8e63e4083819666c9" category="inline-image-macro">볼륨을 생성하기 위해 입력해야 하는 빈 템플릿을 보여 주는 스크린샷</block>
+  <block id="19c51733b2ad780abc1dd51dfb4774d0" category="paragraph"><block ref="19c51733b2ad780abc1dd51dfb4774d0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="31f425aaa6a26f3fc5e635704753602f" category="paragraph">* 참고: * 해당 매개 변수의 값을 보려면 * 읽기 전용 매개 변수 표시 * 확인란을 클릭하여 템플릿에 의해 잠긴 모든 필드를 표시할 수 있습니다. 기본적으로 이러한 미리 정의된 필드는 숨겨지고 완료해야 하는 필드만 표시됩니다.</block>
+  <block id="44e06c3ed2de64bcd539ac10a3a31173" category="list-text">context_area에서 작업 환경은 처음 시작한 작업 환경의 이름으로 채워집니다. 볼륨을 생성할 * 스토리지 VM * 및 * 애그리게이트 * 를 선택해야 합니다.</block>
+  <block id="b4798c3f6907cfb67d2e44f900cd8761" category="inline-xref">볼륨 생성 중</block>
+  <block id="d6fbed7ed4f7f24d5424eed00308902b" category="list-text">템플릿에서 하드 코딩되지 않은 모든 매개변수에 대한 값을 추가합니다. 을 참조하십시오 <block ref="0987d6f2734ae944e1736c1f24a760ec" category="inline-xref-macro-rx"></block> 사내 ONTAP 볼륨을 구축하기 위해 완료해야 하는 모든 매개 변수에 대한 자세한 내용은</block>
+  <block id="2bc51d1d472e80f2611fe5ff280c4ebe" category="list-text">이 볼륨에 필요한 모든 매개 변수를 정의한 후 * 템플릿 실행 * 을 클릭합니다.</block>
+  <block id="b185109168e53693f7b6943d7df66166" category="paragraph">Cloud Manager는 볼륨을 프로비저닝하고 진행 상황을 볼 수 있도록 페이지를 표시합니다.</block>
+  <block id="40136e65ff57723941fc2af2bf21d54a" category="inline-image-macro">템플릿에서 새 볼륨 생성 진행률을 보여 주는 스크린샷</block>
+  <block id="1d2547b9bcbb0f13f704545fd4b3b7b0" category="paragraph"><block ref="1d2547b9bcbb0f13f704545fd4b3b7b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3fcf4599fd910141dcd628a7411238d5" category="paragraph">그러면 새 볼륨이 작업 환경에 추가됩니다.</block>
+  <block id="0ca2ea4d1ed88de2980b88af718eedaf" category="paragraph">또한 볼륨에 Cloud Backup을 설정하는 등 템플릿에 보조 작업이 구현되는 경우 해당 작업도 수행됩니다.</block>
+  <block id="1e57268fd975664444ddbda428e56bf7" category="paragraph">CIFS 공유를 프로비저닝한 경우 파일 및 폴더에 대한 사용자 또는 그룹 권한을 제공하고 해당 사용자가 공유를 액세스하고 파일을 생성할 수 있는지 확인합니다.</block>
+  <block id="9471c2e49e82f1450164e486a41810fd" category="section-title">데이터 복제</block>
+  <block id="d67fa48b66fcc0b221394da39a91b7bd" category="paragraph">1회 데이터 복제를 선택하여 Cloud Volumes ONTAP 시스템과 ONTAP 클러스터 간에 데이터를 복제할 수 있습니다. 이 경우 클라우드 간에 데이터를 이동하거나, 재해 복구 또는 장기 보존에 도움이 되는 반복 일정을 선택할 수 있습니다.</block>
+  <block id="4bfd6df89ae3683de5e81c0d2d601355" category="inline-link">자세한 내용을 보려면 여기를 클릭하십시오</block>
+  <block id="a8a96c36866372f961b611932778c533" category="paragraph"><block ref="740522bad1dae5d9c555be7717efd2a7" category="inline-link-rx"></block>.</block>
+  <block id="69d7d8f5eb94524f8d67bd4810ecd3b4" category="section-title">데이터 백업</block>
+  <block id="4dafc83aff4c0c428f00d14ba637d08e" category="paragraph">클라우드 백업을 사용하여 사내 ONTAP 시스템의 데이터를 클라우드의 저렴한 오브젝트 스토리지로 백업할 수 있습니다. 이 서비스는 온프레미스 및 클라우드 데이터의 보호 및 장기 아카이브를 위한 백업 및 복원 기능을 제공합니다.</block>
+  <block id="bfdc46d4c7e2c86b2f36ab608613b0a1" category="paragraph"><block ref="92bb2af477ec46204a7fbf4ac8f25c07" category="inline-link-rx"></block>.</block>
+  <block id="b62196e30035e69996a2d1d3a9d64116" category="section-title">데이터를 스캔, 매핑 및 분류합니다</block>
+  <block id="8c5469d13e648a63a3b3954844a606d5" category="paragraph">Cloud Data Sense는 기업의 사내 클러스터를 스캔하여 데이터를 매핑 및 분류하고, 개인 정보를 식별할 수 있습니다. 따라서 보안 및 규정 준수 위험을 줄이고 스토리지 비용을 절감하며 데이터 마이그레이션 프로젝트를 지원할 수 있습니다.</block>
+  <block id="3a5ae3c8370ec0420f4d5f09975f9473" category="paragraph"><block ref="4ac871f2acbfe21994d476b705580307" category="inline-link-rx"></block>.</block>
+  <block id="8eb970559649a4b00ff570ac7b611b1a" category="section-title">데이터를 클라우드에 계층화</block>
+  <block id="74f0cc3c17958e80b4ccd076c9e50493" category="paragraph">Cloud Tiering을 사용하여 ONTAP 클러스터에서 오브젝트 스토리지로 비활성 데이터를 자동으로 계층화하여 데이터 센터를 클라우드로 확장하십시오.</block>
+  <block id="06ed7fc16cefcce74b94962584869b39" category="paragraph"><block ref="240bb627dd9982017efa6d3b711a39ad" category="inline-link-rx"></block>.</block>
+  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp은 다양한 방법으로 Cloud Manager를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">도움을 받으십시오</block>
+  <block id="7ccaf84febc0ed633fbdbadb8d488a7e" category="paragraph"><block ref="7ccaf84febc0ed633fbdbadb8d488a7e" category="inline-link-macro-rx"></block></block>
+  <block id="b151b3ad7000d170a09f91975e26bf45" category="summary">사내 ONTAP 시스템의 고급 관리를 수행해야 하는 경우 ONTAP System Manager 또는 명령줄 인터페이스를 사용하여 관리할 수 있습니다.</block>
+  <block id="6d0824d1c808525b64d6b584ae3a8175" category="doc">사내 ONTAP 시스템에 연결</block>
+  <block id="bd6791b739d936827d0be68a00c193da" category="section-title">System Manager에 연결합니다</block>
+  <block id="e9981bacbcd5ea480a3cacf7d804b6cc" category="paragraph">클러스터에서 실행되는 브라우저 기반 관리 툴인 System Manager에서 일부 사내 ONTAP 작업을 수행해야 할 수 있습니다.</block>
+  <block id="ec94e3c72dd4a57a61fc48219f606995" category="paragraph">Cloud Manager에 액세스하는 컴퓨터는 사내 ONTAP 시스템에 네트워크로 연결되어 있어야 합니다. 예를 들어, 온프레미스 네트워크에 있는 점프 호스트에서 Cloud Manager에 로그인해야 할 수 있습니다.</block>
+  <block id="b942f0c9a0122357a68d35d76ab18fff" category="list-text">Canvas 페이지에서 시스템 관리자로 관리하려는 온프레미스 ONTAP 시스템을 두 번 클릭합니다.</block>
+  <block id="cb4fcd5786332ca0e73ec9ae0b1d43e7" category="list-text">메뉴 아이콘을 클릭한 다음 * System Manager * 를 클릭합니다.</block>
+  <block id="3eab8ee0f45fd9624973c05ec4303d5a" category="list-text">시작 * 을 클릭합니다.</block>
+  <block id="7587c6609566a034156659b2141e3de1" category="paragraph">System Manager가 새 브라우저 탭에 로드됩니다.</block>
+  <block id="84a670db3237cb6e7874ef079ba39fe4" category="list-text">로그인 화면에서 클러스터를 생성할 때 지정한 admin 사용자의 사용자 이름과 암호를 입력한 다음 * 로그인 * 을 클릭합니다.</block>
+  <block id="304e0c9f87006647e7b7cb69233dbe66" category="paragraph">System Manager 콘솔이 로드됩니다. 이제 이 IT를 사용하여 온프레미스 ONTAP 시스템을 관리할 수 있습니다.</block>
+  <block id="31c2c11de9569969822fd820af45d8ac" category="section-title">ONTAP CLI에 연결합니다</block>
+  <block id="4e107e465b3e776fcb07ca6e5f56265f" category="paragraph">ONTAP CLI를 사용하면 모든 관리 명령을 실행할 수 있으며 고급 작업에 이상적이고 CLI를 사용하는 것이 더 편할 경우 적합합니다. SSH(Secure Shell)를 사용하여 CLI에 연결할 수 있습니다.</block>
+  <block id="e6ad06bd1420173d20b58a9a17dd8153" category="paragraph">SSH를 사용하여 사내 ONTAP 시스템에 연결하는 호스트에는 사내 ONTAP 시스템에 대한 네트워크 연결이 있어야 합니다. 예를 들어, 사내 네트워크의 점프 호스트에서 SSH를 사용해야 할 수 있습니다.</block>
+  <block id="6ad94be4e63b3d4783fdd1f854b7bbdf" category="list-text">Cloud Manager에서 클러스터 관리 인터페이스의 IP 주소를 확인합니다.</block>
+  <block id="4820059dd9647a62e3d49d6805dc17ef" category="list-text">Canvas 페이지에서 온-프레미스 ONTAP 시스템을 선택합니다.</block>
+  <block id="23c2e641ffa866a42c848c9f2c90ecd1" category="list-text">을 클릭합니다 <block ref="a74720392297d66ac1ab9a90296912c9" category="inline-image-macro-rx" type="image"></block> 오른쪽 창에서 클러스터 관리 IP 주소를 복사합니다.</block>
+  <block id="58cab5452c4b6c92c8dd75e357433c83" category="list-text">SSH를 사용하여 admin 계정을 사용하여 클러스터 관리 인터페이스 IP 주소에 연결합니다.</block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 예 *</block>
+  <block id="ed9663bc6832f99d5a7f57ceca04eed7" category="paragraph">다음 이미지는 PuTTY를 사용하는 예를 보여 줍니다.</block>
+  <block id="a9981641e36e0e304ba5071a1d3b4273" category="inline-image-macro">포트 22의 대상 admin@192.168.11 .5를 보여 주는 스크린샷</block>
+  <block id="7a9bcdad1d59400ff7c688cda722d3e6" category="paragraph"><block ref="7a9bcdad1d59400ff7c688cda722d3e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2180cb7bd670dcd385a7b5e609212943" category="list-text">로그인 프롬프트에서 admin 계정의 암호를 입력합니다.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
+  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
+  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9에 대한 고지 사항</block>
+  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
+  <block id="45ddc58d1297027037d3c08b53916d6d" category="summary">Active IQ 디지털 어드바이저가 클라우드 관리자 UI에 통합되어 단일 창에서 ONTAP 클러스터의 운영, 보안, 성능을 최적화할 수 있습니다.</block>
+  <block id="1f1125562764d9d74a4d3f4bc7cc2a80" category="doc">Active IQ 디지털 자문업체 를 사용하여 클러스터 최적화</block>
+  <block id="8a55e23dfc2cee9948b7f2cff318419d" category="paragraph"><block ref="83bf54f0a7542b03c8754003363eabd9" category="inline-link-rx"></block> Cloud Manager UI에 통합되어 단일 창에서 ONTAP 클러스터의 운영, 보안, 성능을 최적화할 수 있습니다.</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">피처</block>
+  <block id="60f840b3ee58d04f9e443013fa9e3b28" category="paragraph">Active IQ 디지털 자문업체 를 사용하여 관심 목록 수준에서 스토리지 시스템의 전반적인 상태, 시스템 상태, 인벤토리, 계획, 업그레이드 및 중요한 통찰력을 확인할 수 있습니다.</block>
+  <block id="cd5d4df84a7902a777304de9ff13e8a8" category="list-text">스토리지 시스템의 상태 분석 및 최적화</block>
+  <block id="9d4e486fd4968dd03a1921222e688c12" category="list-text">스토리지 시스템의 모든 위험과 위험 완화를 위한 조치에 대한 통찰력을 확보할 수 있습니다</block>
+  <block id="4c8438807538fa50db0d24cda516c562" category="list-text">성능 데이터의 그래픽 형식을 확인하여 스토리지 디바이스의 성능을 분석할 수 있습니다</block>
+  <block id="63a792f0efaeee81d9e7f3ba251637c2" category="list-text">90% 용량을 초과하거나 90% 용량에 근접하는 시스템에 대한 세부 정보를 확인하십시오</block>
+  <block id="25bab72d979d2f781310fbd8a7510d1e" category="list-text">만료되었거나 향후 6개월 이내에 만료되었을 하드웨어 및 소프트웨어에 대한 정보를 확인하십시오</block>
+  <block id="c0b44a835cfaa8886063c96fb9342411" category="list-text">스토리지 시스템 소프트웨어를 업그레이드하고 Ansible을 사용하여 ONTAP 펌웨어를 업데이트합니다</block>
+  <block id="696fbf3ecd0e89c737f9c5b7adddfb8e" category="section-title">지원되는 ONTAP 시스템</block>
+  <block id="4b094536c4cca99df693f08aaf755f4d" category="paragraph">Active IQ 디지털 어드바이저는 NSS 계정 내의 모든 사내 ONTAP 시스템 및 Cloud Volumes ONTAP 시스템에 대한 정보를 제공합니다.</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">비용</block>
+  <block id="f534e70d23b20b69790b5281217a7257" category="paragraph">Cloud Manager를 통해 이 서비스를 무료로 사용할 수 있습니다.</block>
+  <block id="292e5c26d5c03cc4f8e1e8768bbbabaa" category="section-title">Active IQ 디지털 조언이 클라우드 매니저와 어떻게 연동되는지 알아보십시오</block>
+  <block id="d7c60574b4f0b4da904aa4b90c236328" category="paragraph">Active IQ 디지털 자문업체 사용자 인터페이스는 Cloud Manager에 완전히 통합되어 있습니다.</block>
+  <block id="6c393be0430be4cea1a82e8ea44630ed" category="paragraph">Cloud Manager에서 * Active IQ * 서비스를 클릭합니다.</block>
+  <block id="ec6a6fa8382cb9301ba7488319f6fb15" category="list-text">Cloud Manager에 기존 NSS 계정을 이미 등록한 경우 Active IQ 디지털 어드바이저 UI는 의 독립 실행형 구현에서 보이는 것과 같이 표시됩니다<block ref="a550a333ee33d06042f0abf049084bb9" category="inline-link-rx"></block>.</block>
+  <block id="8965da9bda23fc5879f1275b96def7e5" category="inline-image-macro">Cloud Manager의 Active IQ 디지털 자문업체 사용자 인터페이스 스크린샷</block>
+  <block id="38f4032535fda9a726d153b903098e68" category="paragraph"><block ref="38f4032535fda9a726d153b903098e68" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7524f7a154d0b13a1e895c56c832c376" category="inline-link">NSS 계정을 지금 등록하십시오</block>
+  <block id="42216d007027bec4fe072e64e93bdc65" category="list-text">Cloud Manager에 NSS 계정을 등록하지 않은 경우<block ref="bc2c9d3f2e75cd48cb0b55d3477b90f9" category="inline-link-rx"></block> 그런 다음 Active IQ 디지털 자문 UI가 나타납니다.</block>
+  <block id="48c7c08bdc82dde24c342aee125d0f2f" category="inline-link">자세한 내용은 이 FAQ를 참조하십시오</block>
+  <block id="3fd1583fc67e0323cda8c48d28e7a1b0" category="admonition">2021년 12월 3일 현재 NetApp은 NSS 계정에 대한 자격 증명을 등록하는 새로운 방법론으로 전환했습니다.<block ref="cb97e5fbd5823896c819a7579da8b62c" category="inline-link-rx"></block>. NSS 계정이 이전 자격 증명 세트를 사용하는 경우 계정을 새 자격 증명으로 업데이트해야 합니다.</block>
+  <block id="0a20c90d5270bed19fcaf851778c663b" category="section-title">다음 단계</block>
+  <block id="8aec6a2bcfb78af1fffa4f2c52dfe49d" category="inline-link">Active IQ 디지털 자문 문서</block>
+  <block id="21f0ca98c05681847062cb25ecc8fb48" category="paragraph">를 참조하십시오<block ref="2abfe6afa62505308fadab43da217548" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="def39ca4f33907811340e246db3f16d2" category="summary">Cloud Manager를 통해 NetApp AFF 및 FAS 시스템을 관리하여 스토리지를 프로비저닝하고, 데이터를 복제하고, 중요한 클라우드 기반 데이터 서비스를 구성합니다.</block>
+  <block id="2631cea4d4184b173c4d7b153d959556" category="doc">사내 ONTAP 클러스터 설명서</block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
+  <block id="9a30b78b07a6b42c9e4998f9c5d5640f" category="sidebar">사내 ONTAP 클러스터 문서</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
+  <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="sidebar">ONTAP 클러스터에 대해 알아보십시오</block>
+  <block id="019323681c39b462d0fd30312fc741c2" category="sidebar">온프레미스 ONTAP 클러스터를 관리합니다</block>
+  <block id="8ad62e3eb63519f91a079cc6e3b60ae4" category="sidebar">온프레미스 ONTAP 볼륨을 관리합니다</block>
+  <block id="b23da3dd5cacf822f40ae17bb33e9245" category="sidebar">Active IQ 디지털 자문업체 를 사용하여 클러스터 최적화</block>
+  <block id="0edf67a4be59f702b9420db43194ad29" category="sidebar">Active IQ 데이터를 사용하여 클러스터 관리</block>
+  <block id="81563192c68b08feebdcc9a64a5e510b" category="sidebar">사내 클러스터에 연결합니다</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">지식 및 지원</block>
+  <block id="72d4138d424c03eaee16ca8b76b4263d" category="sidebar">검색된 클러스터와 검색되지 않은 온프레미스 클러스터를 확인합니다</block>
+  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="sidebar">새로운 기능</block>
+  <block id="1c27e11c5e65b93611e6f5ce640f8184" category="sidebar">볼륨 생성</block>
+  <block id="ef8e14c9c12dfb15fa021d5c96021bb8" category="sidebar">새 디스크 및 쉘프 펌웨어 다운로드</block>
+  <block id="daefd0b150727ca9436d0c950172fd71" category="sidebar">System Manager 및 CLI를 사용하여 사내 ONTAP 시스템을 관리합니다</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 커뮤니티</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 블로그</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
+</blocks>

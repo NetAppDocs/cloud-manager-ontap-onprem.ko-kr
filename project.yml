@@ -1,0 +1,69 @@
+---
+settings:
+  name: On-prem ONTAP clusters
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ko-kr,us-en,ja-jp,zh-cn
+sidebar:
+  entries:
+  - title: 모든 Cloud Manager 설명서
+    url: https://docs.netapp.com/us-en/cloud-manager-family
+  - title: 사내 ONTAP 클러스터 문서
+    url: "/index.html"
+  - title: 릴리스 정보
+    url: "/whats-new.html"
+  - title: 시작하십시오
+    entries:
+    - title: ONTAP 클러스터에 대해 알아보십시오
+      url: "/task-discovering-ontap.html"
+  - title: 온프레미스 ONTAP 클러스터를 관리합니다
+    entries:
+    - title: 온프레미스 ONTAP 볼륨을 관리합니다
+      url: "/task-provisioning-ontap.html"
+    - title: Active IQ 디지털 자문업체 를 사용하여 클러스터 최적화
+      url: "/concept-aiq-digital-advisor.html"
+    - title: Active IQ 데이터를 사용하여 클러스터 관리
+      url: "/task-managing-ontap.html"
+    - title: 사내 클러스터에 연결합니다
+      url: "/task-connect-to-onprem.html"
+    - title: 온프레미스 ONTAP 작업 환경을 제거합니다
+      url: "/task-remove-on-prem.html"
+  - title: 지식 및 지원
+    entries:
+    - title: 지원을 위해 등록하십시오
+      url: "/task-support-registration.html"
+    - title: 도움을 받으십시오
+      url: "/task-get-help.html"
+  - title: 법적 고지
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 시작하십시오
+    links:
+    - title: 검색된 클러스터와 검색되지 않은 온프레미스 클러스터를 확인합니다
+      url: task-discovering-ontap.html#viewing-discovered-and-undiscovered-on-prem-clusters
+    - title: ONTAP 클러스터에 대해 알아보십시오
+      url: task-discovering-ontap.html
+    - title: 새로운 기능
+      url: whats-new.html
+  - title: 온프레미스 ONTAP 클러스터를 관리합니다
+    links:
+    - title: 볼륨 생성
+      url: task-provisioning-ontap.html
+    - title: 새 디스크 및 쉘프 펌웨어 다운로드
+      url: task-managing-ontap.html#downloading-new-disk-and-shelf-firmware
+    - title: System Manager 및 CLI를 사용하여 사내 ONTAP 시스템을 관리합니다
+      url: task-connect-to-onprem.html
+  - title: 블로그 커뮤니티
+    links:
+    - title: NetApp 커뮤니티
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Cloud Central 블로그
+      url: https://cloud.netapp.com/blog
+    - title: 클라우드 웨비나
+      url: https://cloud.netapp.com/events
+product-family: {}
