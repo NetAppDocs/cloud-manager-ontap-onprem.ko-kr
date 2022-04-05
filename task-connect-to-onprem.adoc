@@ -6,6 +6,7 @@ summary: 사내 ONTAP 시스템의 고급 관리를 수행해야 하는 경우 O
 ---
 = 사내 ONTAP 시스템에 연결
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

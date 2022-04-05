@@ -6,6 +6,7 @@ summary: Cloud Manager에서 더 이상 관리하지 않으려는 경우 사내 
 ---
 = 온프레미스 ONTAP 작업 환경을 제거합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

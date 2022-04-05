@@ -6,6 +6,7 @@ summary: Cloud Manager의 검색 페이지에서는 온프레미스 환경에서
 ---
 = Active IQ 데이터를 사용하여 ONTAP 클러스터 관리
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

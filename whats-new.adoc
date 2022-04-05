@@ -6,6 +6,7 @@ summary: 온프레미스 ONTAP 클러스터의 새로운 기능에 대해 알아
 ---
 = 온프레미스 ONTAP 클러스터의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
