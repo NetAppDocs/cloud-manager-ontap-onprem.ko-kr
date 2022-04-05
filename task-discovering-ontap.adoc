@@ -84,7 +84,7 @@ image:screenshot_aiq_main_page.png["온-프레미스 ONTAP 클러스터에 대�
 
 
 
-NOTE: 지원 계약이 만료되면 검색 페이지에서 시스템이 제거됩니다. 그러나 작업 환경에서 이러한 시스템을 계속 관리할 수 있습니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/active-iq/task-renew-support-contracts-for-your-systems.html["Active IQ 디지털 자문으로부터 지원 계약을 갱신하십시오"^].
+NOTE: 지원 계약이 만료되면 검색 페이지에서 시스템이 제거됩니다. 그러나 작업 환경에서 이러한 시스템을 계속 관리할 수 있습니다. 자세한 내용은 를 참조하십시오 link:https://docs.netapp.com/us-en/active-iq/task_renew_support_contracts_for_your_systems.html["Active IQ 디지털 자문으로부터 지원 계약을 갱신하십시오"^].
 
 
 

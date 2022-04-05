@@ -49,7 +49,6 @@
   <block id="04c986062f9c3ab6ca9967dac4c5be0d" category="paragraph"><block ref="04c986062f9c3ab6ca9967dac4c5be0d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b0ae438dbb700ffcab0b452edad46174" category="paragraph">유효한 지원 계약이 있는 ONTAP 클러스터는 Cloud Manager에서 검색되었는지 여부와 함께 표시됩니다.</block>
   <block id="b5e4244593ae3713ba9c349b71c06182" category="inline-link-macro">Active IQ 디지털 자문으로부터 지원 계약을 갱신하십시오</block>
-  <block id="f58334fc97f74b0f9a5bd0fcab804d79" category="admonition">지원 계약이 만료되면 검색 페이지에서 시스템이 제거됩니다. 그러나 작업 환경에서 이러한 시스템을 계속 관리할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="73ab273e50affbed0eaeebe6bee46665" category="inline-link-macro-rx"></block>.</block>
   <block id="7f50c223930d4a02cade2b9c75256f8f" category="section-title">클러스터 정보 및 계약 세부 정보 보기</block>
   <block id="e6dfd5017eebf97461338fa01b9cb076" category="paragraph">Digital Wallet_을 사용하여 클러스터 세부 정보와 하드웨어 및 소프트웨어 계약 상태를 볼 수 있습니다.</block>
   <block id="7d8cc3d1d840829a8cdda42ed1f06341" category="list-text">디지털 지갑 * 에서 * 온-프레미스 ONTAP * 탭을 클릭합니다.</block>
@@ -342,4 +341,5 @@
   <block id="f61163b681442ac500a8018c87241770" category="section-title">2021년 11월 28일</block>
   <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">2021년 3월 8일</block>
   <block id="748a389f24166595a5373d446b323287" category="admonition">2021년 12월 현재 NetApp은 NSS 계정에 대한 자격 증명을 등록하는 새로운 방법론으로 전환했습니다.<block ref="cb97e5fbd5823896c819a7579da8b62c" category="inline-link-rx"></block>. NSS 계정이 이전 자격 증명 세트를 사용하는 경우 계정을 새 자격 증명으로 업데이트해야 합니다.</block>
+  <block id="52d7343109a7ba661f3e64dd9602ee49" category="admonition">지원 계약이 만료되면 검색 페이지에서 시스템이 제거됩니다. 그러나 작업 환경에서 이러한 시스템을 계속 관리할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="d9b78242359ad37ab7655d26c02f42fb" category="inline-link-macro-rx"></block>.</block>
 </blocks>
