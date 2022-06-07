@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">한국어</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">한국어</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/cloud-manager-ontap-onprem/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/whats-new.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/whats-new.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/cloud-manager-ontap-onprem/whats-new.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/cloud-manager-ontap-onprem/whats-new.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/cloud-manager-ontap-onprem/whats-new.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-ontap-onprem/whats-new.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/whats-new.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/whats-new.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-ontap-onprem/whats-new.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-ontap-onprem/whats-new.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -362,8 +354,6 @@
           <img src="/ko-kr/cloud-manager-ontap-onprem/images/pdf.png" width="16" height="16"/>이 문서 사이트의 PDF</a>
 
 
-
-
     <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/ko-kr/cloud-manager-ontap-onprem/pdfs/pages/whats-new.pdf" >
     <img src="/ko-kr/cloud-manager-ontap-onprem/images/pdf.png" width="16" height="16"/>
@@ -418,6 +408,8 @@
             온프레미스 ONTAP 클러스터를 관리합니다
           </a>
           
+
+
 
 
 
@@ -502,10 +494,10 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/cloud-manager-family">
-        모든 Cloud Manager 설명서
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/cloud-manager-ontap-onprem/index.html">
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/ko-kr/cloud-manager-family/"><img src="/ko-kr/cloud-manager-ontap-onprem/images/left_arrow.png" alt=""><pre>All Cloud Manager documentation</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/cloud-manager-ontap-onprem/index.html">
         사내 ONTAP 클러스터 문서
       </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/cloud-manager-ontap-onprem/whats-new.html">
         릴리스 정보
@@ -519,6 +511,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/cloud-manager-ontap-onprem/task-provisioning-ontap.html">
         온프레미스 ONTAP 볼륨을 관리합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/cloud-manager-ontap-onprem/task-administer-advanced-view.html">
+        System Manager를 사용하여 관리합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/cloud-manager-ontap-onprem/concept-aiq-digital-advisor.html">
         Active IQ 디지털 자문업체 를 사용하여 클러스터 최적화
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/cloud-manager-ontap-onprem/task-managing-ontap.html">
@@ -603,7 +597,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 07:49:29 +0000">04/18/2022</time>
+    <time datetime="2022-06-07 14:02:11 +0000">06/07/2022</time>
     
   
 
@@ -614,6 +608,26 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>온프레미스 ONTAP 클러스터의 새로운 기능에 대해 알아보십시오.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="2022년-6월-7일">2022년 6월 7일</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>다음 변경은 커넥터의 3.9.19 릴리스에 도입되었습니다.</p>
+</div>
+<div class="sect2">
+<h3 id="새-고급-보기">새 고급 보기</h3>
+<div class="paragraph">
+<p>ONTAP 사내 클러스터의 고급 관리가 필요한 경우에는 ONTAP 시스템과 함께 제공되는 관리 인터페이스인 ONTAP System Manager를 사용하여 이러한 작업을 수행할 수 있습니다. Cloud Manager 인터페이스에 Cloud Manager 인터페이스가 포함되어 있으므로 고급 관리를 위해 Cloud Manager에서 그대로 둘 필요가 없습니다.</p>
+</div>
+<div class="paragraph">
+<p>이 고급 보기는 9.10.0 이상을 실행하는 온프레미스 ONTAP 클러스터에서 미리 보기로 사용할 수 있습니다. NetApp은 이 경험을 개선하고 다음 릴리즈에서 향상된 기능을 추가할 계획입니다. 제품 내 채팅을 사용하여 피드백을 보내주십시오.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-administer-advanced-view.html">"고급 보기에 대해 자세히 알아보십시오"</a>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -823,4 +837,5 @@
     </script>
     <script src='/ko-kr/cloud-manager-ontap-onprem/js/www-ntap.js'></script>
     <script src='/ko-kr/cloud-manager-ontap-onprem/js/tabbed-blocks.js'></script>
+    <script src='/ko-kr/cloud-manager-ontap-onprem/js/sidebar.js'></script>
   </body></html>
