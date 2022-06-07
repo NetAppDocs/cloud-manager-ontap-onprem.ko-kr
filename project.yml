@@ -10,8 +10,6 @@ settings:
   langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: 모든 Cloud Manager 설명서
-    url: https://docs.netapp.com/us-en/cloud-manager-family
   - title: 사내 ONTAP 클러스터 문서
     url: "/index.html"
   - title: 릴리스 정보
@@ -24,6 +22,8 @@ sidebar:
     entries:
     - title: 온프레미스 ONTAP 볼륨을 관리합니다
       url: "/task-provisioning-ontap.html"
+    - title: System Manager를 사용하여 관리합니다
+      url: "/task-administer-advanced-view.html"
     - title: Active IQ 디지털 자문업체 를 사용하여 클러스터 최적화
       url: "/concept-aiq-digital-advisor.html"
     - title: Active IQ 데이터를 사용하여 클러스터 관리
@@ -65,3 +65,4 @@ homepage:
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
+  sidebar_label: All Cloud Manager documentation
